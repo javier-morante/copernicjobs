@@ -18,7 +18,11 @@ So finally the implemented technologies are the following ones:
 |Databases          |![Mysql](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)|
 |DevOps             |![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white) ![AWS](https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)|
 
-<img src="" alt="image 1"/>
+<img src="https://github.com/javier-morante/copernicjobs/blob/main/images/image1.png" alt="image 1"/>
+<img src="https://github.com/javier-morante/copernicjobs/blob/main/images/image2.png" alt="image 2"/>
+<img src="https://github.com/javier-morante/copernicjobs/blob/main/images/image3.png" alt="image 3"/>
+
+
 
 ![video of demo]([URL_del_video](https://github.com/javier-morante/copernicjobs/blob/main/Copernic_Jobs_Video.mov)https://github.com/javier-morante/copernicjobs/blob/main/Copernic_Jobs_Video.mov)
 
