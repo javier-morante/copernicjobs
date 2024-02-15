@@ -1,0 +1,14 @@
+FROM node:19-slim
+
+LABEL version="0.1"
+LABEL description="React and Vite Frontend Container for CopernicJobs"
+
+WORKDIR /app
+
+COPY ./frontend .
+
+RUN npm install
+
+EXPOSE 5173
+
+CMD ["npm", "run", "dev"]

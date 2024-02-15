@@ -1,0 +1,12 @@
+{
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "dev",
+			"path": "frontend",
+			"problemMatcher": [],
+			"label": "npm: dev - frontend",
+			"detail": "vite --host"
+		}
+	]
+}

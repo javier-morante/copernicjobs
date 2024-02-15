@@ -1,0 +1,76 @@
+version: '3'
+
+#Services Configuration
+services:
+  # Mysql Container
+  mysql:
+    image: "mysql:8"
+    ports:
+      - 3307:3306
+    networks:
+      app-network:
+        aliases:
+          - backend
+    environment:
+      MYSQL_ROOT_PASSWORD: abc.123
+      MYSQL_DATABASE: abp_project_2
+
+  # Spring Boot Backend Container
+  backend:
+    build:
+      context: .
+      dockerfile: ./backend/dockerfile
+    depends_on:
+      - mysql
+    ports:
+      - "9090:8080"
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: abc.123
+      MYSQL_DATABASE: abp_project_2
+    networks:
+      app-network:
+        aliases:
+          - frontend
+          - mysql
+    volumes:
+      - pdf_data:/home/static/api/pdf
+      - images_data:/home/static/api/images
+  
+  # React and Vite Frontend Container
+  frontend:
+    build:
+      context: .
+      dockerfile: ./frontend/dockerfile
+    ports:
+      - "8080:5173"
+    environment:
+      BACKEND_URL: http://172.27.16.1:9090/
+    networks:
+      app-network:
+        aliases:
+          - backend
+
+# Network configurations
+networks:
+  app-network:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "false"
+
+
+volumes:
+  pdf_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: C:\static\api\pdf
+  
+  images_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: C:\static\api\images
